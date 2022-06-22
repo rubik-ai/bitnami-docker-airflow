@@ -19,7 +19,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
 
   airflow-worker:
-    image: rubiklabs/airflow-worker:v1
+    image: rubiklabs/airflow-worker:2.3.0-d1
     container_name: worker
     networks:
       - airflow
@@ -38,7 +38,7 @@ services:
       - AIRFLOW_WEBSERVER_HOST=webserver
 
   airflow-scheduler:
-    image: rubiklabs/airflow-scheduler:v2
+    image: rubiklabs/airflow-scheduler:2.3.0-d1
     container_name: scheduler
     networks:
       - airflow
@@ -57,7 +57,7 @@ services:
       - AIRFLOW_WEBSERVER_HOST=webserver
 
   airflow:
-    image: rubiklabs/airflow:v2
+    image: rubiklabs/airflow:2.3.0-d1
     container_name: webserver
     networks:
       - airflow
